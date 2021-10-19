@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'encyclopedia/title.css'%}"
+  </head>
+  <body>
+    <form>
+      <a href="{{title}}/edit"><input type="button" value="Edit" name="edit"></a>
+    </form>
+    <div>
+    {{content|safe}}
+    </div>
+  </body>
+</html>
