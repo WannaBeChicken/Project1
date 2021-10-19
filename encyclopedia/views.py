@@ -29,10 +29,7 @@ def search(request):
     var=0
 
     if data in lst:
-        entry=util.get_entry(data)
-        return render(request,"encyclopedia/search.html",{
-        "search":markdowner.convert(entry),
-        })
+        return HttpResponseRedirect(reverse("title", kwargs={"title":data}))
         var=1
         sys.exit()
 
